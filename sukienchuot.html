@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img id="myImage" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" style = "width: 30%"/>
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="Nhấn" onclick="moveRight();"/>
+</form>
+<script>
+    let ball = null;
+    ball = document.getElementById('myImage');
+    function init() {
+        ball = document.getElementById('myImage');
+        ball.style.position = 'relative';
+        ball.style.left = '0px';
+    }
+    function moveRight() {
+        ball.style.left = parseInt(ball.style.left) + 200 + 'px';
+    }
+
+    window.onload = init;
+</script>
+</body>
+</html>
